@@ -1,22 +1,22 @@
 class Cloud extends MovableObject {
-    y=20;
+    y = 20;
     height = 250;
-    width =500;
+    width = 500;
     speed = 0.15
 
-    constructor(){
+    constructor(coordinate_x) {
         super().loadImage(`./img/5.Fondo/Capas/4.nubes/1.png`);
 
-        this.x = Math.random()*500;
+        this.x = coordinate_x;
         this.animate();
-    }    
+    }
 
     animate() {
-       this.moveLeft();
+        this.moveLeft();
     }
-    moveLeft(){
+    moveLeft() {
         setInterval(() => {
-            this.x -=this.speed;
+            this.x -= this.speed;
         }, 1000 / 60);
     }
 }
